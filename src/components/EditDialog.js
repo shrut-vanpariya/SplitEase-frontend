@@ -23,7 +23,7 @@ export function EditDialog({ transactionCard, setTransactionCard, transactions, 
     const handleSubmit = async () => {
         let token = localStorage.getItem("usersdatatoken");
         // console.log(token);
-        const res = await fetch(`http://${HOST}/transaction/${transactionData._id}`, {
+        const res = await fetch(`https://${HOST}/transaction/${transactionData._id}`, {
             cache: 'no-store',
             method: "PUT",
             headers: {

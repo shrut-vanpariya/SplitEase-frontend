@@ -21,7 +21,7 @@ const page = ({ params }) => {
 
         let token = localStorage.getItem("usersdatatoken");
         // console.log(token);
-        const res = await fetch(`http://${HOST}/gettransaction/${UserId1}/${UserId2}`, {
+        const res = await fetch(`https://${HOST}/gettransaction/${UserId1}/${UserId2}`, {
             cache: 'no-store',
             method: "GET",
             headers: {

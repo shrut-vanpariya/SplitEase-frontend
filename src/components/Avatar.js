@@ -32,7 +32,7 @@ export function AvatarDrop({ user, setUser }) {
     const handleLogout = async () => {
         let token = localStorage.getItem("usersdatatoken");
         // console.log(token);
-        const res = await fetch(`http://${HOST}/logout`, {
+        const res = await fetch(`https://${HOST}/logout`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

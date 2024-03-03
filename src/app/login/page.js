@@ -28,7 +28,7 @@ const page = () => {
 
     const login = async () => {
 
-        const data = await fetch(`http://${HOST}/login`, {
+        const data = await fetch(`https://${HOST}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -59,7 +59,7 @@ const page = () => {
     const register = async () => {
         setIsLoading(true)
 
-        const data = await fetch(`http://${HOST}/register`, {
+        const data = await fetch(`https://${HOST}/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

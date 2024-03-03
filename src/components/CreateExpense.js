@@ -28,7 +28,7 @@ export function CreateExpense({ UserId1, UserId2, transactions, setTransactions 
     const handleSubmit = async () => {
         let token = localStorage.getItem("usersdatatoken");
         // console.log(token);
-        const res = await fetch(`http://${HOST}/maketransaction/${UserId1}/${UserId2}`, {
+        const res = await fetch(`https://${HOST}/maketransaction/${UserId1}/${UserId2}`, {
             cache: 'no-store',
             method: "POST",
             headers: {

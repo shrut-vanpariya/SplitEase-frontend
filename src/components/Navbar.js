@@ -15,7 +15,7 @@ const Navbar = () => {
     const isValid = async () => {
         let token = localStorage.getItem("usersdatatoken");
         // console.log(token);
-        const res = await fetch(`http://${HOST}/validuser`, {
+        const res = await fetch(`https://${HOST}/validuser`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

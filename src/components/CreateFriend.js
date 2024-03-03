@@ -22,7 +22,7 @@ export function CreateFriend({ user }) {
         let token = localStorage.getItem("usersdatatoken");
         // console.log(token);
 
-        const res = await fetch(`http://${HOST}/makefriend`, {
+        const res = await fetch(`https://${HOST}/makefriend`, {
             cache: 'no-store',
             method: "POST",
             headers: {

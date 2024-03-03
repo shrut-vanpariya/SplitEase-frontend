@@ -13,7 +13,7 @@ const TransactionCard = ({ transaction, transactions, setTransactions }) => {
     const handleDelete = async () => {
         let token = localStorage.getItem("usersdatatoken");
         // console.log(token);
-        const res = await fetch(`http://${HOST}/transaction/${transactionCard._id}`, {
+        const res = await fetch(`https://${HOST}/transaction/${transactionCard._id}`, {
             cache: 'no-store',
             method: "DELETE",
             headers: {
