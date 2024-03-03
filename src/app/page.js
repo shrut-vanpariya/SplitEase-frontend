@@ -20,7 +20,7 @@ export default function Home() {
   const isValid = async () => {
     let token = localStorage.getItem("usersdatatoken");
     // console.log(token);
-    const res = await fetch(`https://${HOST}/validuser`, {
+    const res = await fetch(`http://${HOST}/validuser`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export default function Home() {
 
     let token = localStorage.getItem("usersdatatoken");
     // console.log(token);
-    const res = await fetch(`https://${HOST}/getfriends`, {
+    const res = await fetch(`http://${HOST}/getfriends`, {
       cache: 'no-store',
       method: "GET",
       headers: {

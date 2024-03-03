@@ -16,7 +16,7 @@ const FriendCard = ({ UserId, username, _id }) => {
         let token = localStorage.getItem("usersdatatoken");
         // console.log(token);
 
-        const res = await fetch(`https://${HOST}/totalexpense/${UserId}/${_id}`, {
+        const res = await fetch(`http://${HOST}/totalexpense/${UserId}/${_id}`, {
             cache: 'no-store',
             method: "GET",
             headers: {
