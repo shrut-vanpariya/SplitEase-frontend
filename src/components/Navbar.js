@@ -6,39 +6,40 @@ import { ModeToggle } from './ModeToggle';
 import { AvatarDrop } from './Avatar';
 
 import HOST from '@/lib/host';
+import { useStore } from '@/lib/globalStore';
 
 
 const Navbar = () => {
 
-    const [user, setUser] = useState();
+    const { user, setUser } = useStore();
 
-    const isValid = async () => {
-        let token = localStorage.getItem("usersdatatoken");
-        // console.log(token);
-        const res = await fetch(`https://${HOST}/validuser`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": token
-            }
-        });
+    // const isValid = async () => {
+    //     let token = localStorage.getItem("usersdatatoken");
+    //     // console.log(token);
+    //     const res = await fetch(`https://${HOST}/validuser`, {
+    //         method: "GET",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             "Authorization": token
+    //         }
+    //     });
 
-        const data = await res.json();
-        // console.log(data);
-        if (data.status === 401 || !data) {
-            // console.log("error page redirect");
-        }
-        else {
-            // console.log("user varify");
-            setUser(data);
-            localStorage.setItem('user', JSON.stringify(data));
-        }
-    }
+    //     const data = await res.json();
+    //     // console.log(data);
+    //     if (data.status === 401 || !data) {
+    //         // console.log("error page redirect");
+    //     }
+    //     else {
+    //         // console.log("user varify");
+    //         setUser(data);
+    //         localStorage.setItem('user', JSON.stringify(data));
+    //     }
+    // }
 
 
     useEffect(() => {
         setTimeout(() => {
-            isValid();
+            // isValid();
         }, 0);
     }, []);
 
@@ -52,7 +53,7 @@ const Navbar = () => {
                         user
                             ?
                             <>
-                                <AvatarDrop {...{ user, setUser }} />
+                                <AvatarDrop />
                             </>
                             :
                             <>
